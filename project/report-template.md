@@ -1,16 +1,21 @@
 # Report: Predict Bike Sharing Demand with AutoGluon Solution
-#### NAME HERE
+#### Devika Lakshmanan
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-TODO: Add your explanation
+If the predicted count was negative then the prediction was rejected by kaggle for this submission dataset. Hence, all rows for which negative count was predicted, the predicted count was replaced with 0 value.
 
 ### What was the top ranked model that performed?
-TODO: Add your explanation
+For the initial model, the fit's presets parameter was set to 'best_quality' as per the project instructions to be trained within 10 mins. Also the hyperparameters was left to be the 'default' setting. These settings focused on maximizing the prediction's accuracy and also allowed for bagging and stacking since auto_stack is 'True' with above settings.
+
+It was noticed that in the above scenario, WeightedEnsemble_L3 turned out to be the top ranking model.
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-TODO: Add your explanation
+datetime column was not providing enough data to discover patterns in the bike rent dataset.
+It was important to analyse the set based on trends like day of the month, day of the week, hour of the day, month etc.
+
+Hence, datetime column was changed from object datatype to DateTime64 datatype
 
 ### How much better did your model preform after adding additional features and why do you think that is?
 TODO: Add your explanation
