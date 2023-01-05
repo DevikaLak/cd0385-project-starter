@@ -3,7 +3,7 @@
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-If the predicted count was negative then the prediction was rejected by kaggle for this submission dataset. Hence, all rows for which negative count was predicted, the predicted count was replaced with 0 value.
+If the predicted count was negative then the prediction was rejected by kaggle for this submission dataset. Hence, all rows for which negative count was predicted, the predicted count was replaced with 0 value. 
 
 ### What was the top ranked model that performed?
 For the initial model, the fit's presets parameter was set to 'best_quality' as per the project instructions to be trained within 10 mins. Also the hyperparameters was left to be the 'default' setting. These settings focused on maximizing the prediction's accuracy and also allowed for bagging and stacking since auto_stack is 'True' with above settings.
